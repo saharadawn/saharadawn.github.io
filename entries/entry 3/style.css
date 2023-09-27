@@ -1,0 +1,108 @@
+h{font-family: 
+	'Bolas-Bold';
+color: white;
+font-size: 100px} 
+
+h2 {font-family: bolas;
+font-size: 50} 
+
+h3 {font-family: helvetica;
+font-size: 90px;
+text-align: center;
+color: black}
+
+h4 {font-family: helvetica;
+font-size: 100px;
+text-align: center;
+}
+
+
+
+p {font-family: Bolas-Regular;
+    font-size: 50px;
+color: black;}
+
+p1 {font-family: Bolas-Bold;
+    font-size: 120px;
+color: white;}
+b1{font-family: bolas;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: -90;
+color: white;
+text-align: center;}
+b2{font-family: bolas;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: -90;
+color: white;
+text-align: center;}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: transparent;
+    }
+    to {
+        border-right-color: currentColor;
+    }
+}
+
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden; /* Hide overflowing content */
+    border-right: .15em solid; /* Simulate the cursor */
+    white-space: nowrap; /* Keep content on a single line */
+    animation:
+        typewriter 4s steps(40, end) forwards, /* Adjust '4s' for duration & '40' for steps based on content length */
+        blinkCursor .75s step-end infinite alternate; /* Cursor blinking effect */
+}
+
+
+
+@font-face {
+    font-family: 'Bolas';
+    src: url('Bolas-Bold.woff2') format('woff2'),
+        url('Bolas-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bolas';
+    src: url('Bolas-Regular.woff2') format('woff2'),
+        url('Bolas-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking-text {
+  animation: blink 1s infinite;
+}
+
+body {
+  background-color: red;
+}
+
+
+
+
+
+

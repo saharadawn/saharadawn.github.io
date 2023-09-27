@@ -1,0 +1,38 @@
+
+h1 {font-family: 
+	courier new;
+color: whitesmoke;
+font-size: 60px;
+padding: px;
+}
+
+h1 {border: 2px white;
+  border-radius: 30px;
+}
+
+p {font-family: 
+	courier new;
+color: white;
+font-size: 20px}
+
+p {
+  border: 2px white;
+  border-radius: 10px;
+}
+
+
+body {
+  background-color: blue;
+}
+
+h2
+{font-family: 
+	courier new;
+color: whitesmoke;
+font-size: 20px;
+padding: px;
+}
+
+
+
+
