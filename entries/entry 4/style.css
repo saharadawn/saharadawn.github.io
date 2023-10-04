@@ -1,0 +1,46 @@
+p {font-family: helvetica;
+color: white;
+}
+
+h1 {font-family: helvetica;
+	color: white;
+}
+
+h2 {font-family: helvetica ;
+	color: red;
+text-align: center;}
+
+label {font-family: helvetica ;
+	color: red;
+text-align: center;}
+
+body {background: blue;}
+
+body {
+    background: linear-gradient(to bottom, blue, #00C6FF);
+}
+
+
+
+
+/* Image will be visible normally */
+.image-disappear-on-hover {
+    transition: opacity 0.3s ease; /* This adds a smooth transition */
+}
+
+/* Image will disappear when hovered */
+.image-disappear-on-hover:hover {
+    opacity: 0;
+}
+
+.colorchange {
+    filter: grayscale(100%);
+    transition: opacity 0.7s ease; /* Smooth transition for the disappearing effect */
+}
+
+.colorchange:hover {
+    filter: grayscale(0%);
+    opacity: 0; /* Makes the image disappear on hover */
+}
+
+
