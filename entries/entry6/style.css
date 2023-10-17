@@ -23,12 +23,4 @@ font-family: courier}
 }
 
 @media (max-width: 600px) {
-    .flex-container {
-
-    flex-direction: column;
-    justify-content: center; /* Horizontally center the images */
-    align-items: center;     /* Vertically center the images (if they have different heights) */
-    gap: 10px;  
-            /* Optional: Add a gap between images */
-
-
+    
