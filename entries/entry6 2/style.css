@@ -1,0 +1,93 @@
+
+/*this tells the browser to account for any border and padding in the values you specify for an element's width and height.*/
+* {box-sizing:  border-box;}
+
+
+/* In this case, we are defining default styles for mobile; use media queries to modify for other device sizes */
+body {
+  margin: 30px;
+  padding: 0;
+  background-color: #042135;
+
+
+}
+.container {
+  display: flex;
+  font-family: 'PT Mono', monospace;
+  color:  #042135;
+  font-size:  36px;
+  text-align:  center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0px;
+  gap: 20px 0px; /* row-gap , column gap */
+
+}
+
+.item {
+  margin: 0px;
+  width: 100%;
+  height: 200px;
+}
+
+.item1 {
+  background-color: #ff62f4;
+
+}
+
+.item2 {
+  background-color:  #00a4ff;
+
+}
+
+.item3 {
+  background-color:  #af6801;
+
+}
+
+.item4 {
+  background-color:  #01ed6e;
+
+}
+
+.item5 {
+  background-color:  #fff93f;
+}
+
+.item6 {
+  background-color:  #ff4e00;
+}
+
+
+
+
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+  
+  .item {
+    margin: 0px;
+    width: calc(33.3% - 15px); /* Set item width (25% for 4 columns) and subtract margin for both sides, total 30px */
+    height: 200px;
+  }
+
+}
+
+/* Desktop breakpoint */
+@media (min-width: 992px) {
+  .item { 
+    margin: 0px;
+    width: calc(25% - 15px); /* Set item width (25% for 4 columns) and subtract margin for both sides, total 30px */
+    height: 200px;
+  }
+}
+
+/* Wide screen breakpoint */
+@media (min-width: 1200px) {
+  .item {
+    margin: 0px;
+    width: calc(20% - 15px); /* Set item width (25% for 4 columns) and subtract margin for both sides, total 30px */
+    height: 200px;
+  }
+}

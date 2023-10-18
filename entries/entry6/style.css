@@ -3,24 +3,44 @@ h1 {
     text-align: center;
 }
 
-b {color: black;
-font-family: courier}
+h2 {font-family: courier;
+    font-size: 12pt;
+    text-align: center;}
 
+
+body {
+    margin: 30px;
+    padding: ;
+    background-color: red;
+}
 
 
 .flex-container {
-   ;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Horizontally center the images */
     align-items: center;     /* Vertically center the images (if they have different heights) */
-    gap: 10px;  
-            /* Optional: Add a gap between images */
-    line-height: -100px;
-    overflow: auto; /* Enable scrolling in both directions */
-    width: 1300px;  /* Example width */
-    height: 200px; /* Example height */
+    gap: 10px;               /* Optional: Add a gap between images */
+    overflow: auto;          /* Enable scrolling in both directions */ 
+    height: 450px;
+    line-height: 1;          /* Resetting to normal value; -100px doesn't make sense for line-height */
 }
 
-@media (max-width: 600px) {
-    
+
+@media screen and (max-width: 1250px) {
+    body {
+        background-color: blue;
+    }
+
+}
+
+@media (max-width: 768px) {
+  
+  .item {
+    margin: 0px;
+    width: 600; /* Set item width (25% for 4 columns) and subtract margin for both sides, total 30px */
+    height: 200px;
+
+
+  }
+
