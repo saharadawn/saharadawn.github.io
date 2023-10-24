@@ -101,6 +101,17 @@ body {
   background-color: red;
 }
 
+@media(max-width: 768px) {
+   body{
+    background-color: blue
+}
+
+@media(max-width: 768px) {
+   .blinking-text{
+    font-size: 50pt;
+}
+
+
 
 
 

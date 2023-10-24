@@ -33,6 +33,14 @@ font-size: 20px;
 padding: px;
 }
 
+@media (max-width: 768px) {
+  body {
+    background-color: red;
+  }
+  .solid {
+    font-size:25pt ;
+  }
+
 
 
 

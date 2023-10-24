@@ -4,7 +4,7 @@ h1 {
 }
 
 h2 {font-family: courier;
-    font-size: 12pt;
+    font-size: 20pt;
     text-align: center;}
 
 
@@ -27,7 +27,7 @@ body {
 }
 
 
-@media screen and (max-width: 1250px) {
+@media screen (max-width: 1250px) {
     body {
         background-color: blue;
     }

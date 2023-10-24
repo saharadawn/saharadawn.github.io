@@ -2,6 +2,9 @@ p {font-family: helvetica;
 color: white;
 }
 
+b{ font-family: helvetica;
+color:red;
+font-size: 8px}
 h1 {font-family: helvetica;
 	color: white;
 }
@@ -21,9 +24,19 @@ body {
 }
 
 
+.image-container{
+    z-index: 100px;
 
+}
 
-/* Image will be visible normally */
+.behind{
+    z-index: -1;
+    position: fixed ;
+    top: 200px;
+    left: 90px;
+}
+}
+
 .image-disappear-on-hover {
     transition: opacity 0.3s ease; /* This adds a smooth transition */
 }
@@ -42,5 +55,30 @@ body {
     filter: grayscale(0%);
     opacity: 0; /* Makes the image disappear on hover */
 }
+
+@media (max-width: 768px){
+
+body {
+    background: linear-gradient(to bottom, red, pink);
+}
+
+/* Hide the description by default */
+.description {
+    display: none;
+    position: absolute;
+    top: 10px; /* adjust as needed */
+    left: 10px; /* adjust as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px; /* rounded corners */
+}
+
+/* When the container is hovered, show the description */
+.hover-container:hover .description {
+    display: block;
+}
+
+
 
 
