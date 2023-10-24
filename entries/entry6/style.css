@@ -3,17 +3,16 @@ h1 {
     text-align: center;
 }
 
-h2 {font-family: courier;
+h2 {
+    font-family: courier;
     font-size: 20pt;
-    text-align: center;}
-
+    text-align: center;
+}
 
 body {
     margin: 30px;
-    padding: ;
-    background-color: red;
+    background-color: white;
 }
-
 
 .flex-container {
     display: flex;
@@ -23,24 +22,17 @@ body {
     gap: 10px;               /* Optional: Add a gap between images */
     overflow: auto;          /* Enable scrolling in both directions */ 
     height: 450px;
-    line-height: 1;          /* Resetting to normal value; -100px doesn't make sense for line-height */
+    line-height: 1;
 }
 
-
-@media screen (max-width: 1250px) {
+@media screen and (max-width: 780px) {
     body {
-        background-color: blue;
+        background-color: red;
     }
 
+    .item {
+        margin: 0px;
+        width: 600px; /* Set item width (25% for 4 columns) and subtract margin for both sides, total 30px */
+        height: 200px;
+    }
 }
-
-@media (max-width: 768px) {
-  
-  .item {
-    margin: 0px;
-    width: 600; /* Set item width (25% for 4 columns) and subtract margin for both sides, total 30px */
-    height: 200px;
-
-
-  }
-
