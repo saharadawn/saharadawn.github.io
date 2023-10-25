@@ -1,47 +1,45 @@
-p {font-family: helvetica;
-color: white;
+p {
+    font-family: helvetica;
+    color: white;
 }
 
-b{ font-family: helvetica;
-color:red;
-font-size: 8px}
-h1 {font-family: helvetica;
-	color: white;
+b {
+    font-family: helvetica;
+    color: red;
+    font-size: 8px;
 }
 
-h2 {font-family: helvetica ;
-	color: red;
-text-align: center;}
+h1 {
+    font-family: helvetica;
+    color: white;
+}
 
-label {font-family: helvetica ;
-	color: red;
-text-align: center;}
+h2 {
+    font-family: helvetica;
+    color: red;
+    text-align: center;
+}
 
-body {background: blue;}
+label {
+    font-family: helvetica;
+    color: red;
+    text-align: center;
+}
 
 body {
     background: linear-gradient(to bottom, blue, #00C6FF);
 }
 
-
-.image-container{
-    z-index: 100px;
-
+.image-container {
+    z-index: 100;
 }
 
-.behind{
-    z-index: -1;
-    position: fixed ;
-    top: 200px;
-    left: 90px;
-}
-}
+
 
 .image-disappear-on-hover {
     transition: opacity 0.3s ease; /* This adds a smooth transition */
 }
 
-/* Image will disappear when hovered */
 .image-disappear-on-hover:hover {
     opacity: 0;
 }
@@ -56,29 +54,24 @@ body {
     opacity: 0; /* Makes the image disappear on hover */
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(to bottom, red, pink);
+    }
 
-body {
-    background: linear-gradient(to bottom, red, pink);
+    .description {
+        display: none;
+        position: absolute;
+        top: 10px; /* adjust as needed */
+        left: 10px; /* adjust as needed */
+        background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black background */
+        color: white;
+        padding: 10px;
+        border-radius: 5px; /* rounded corners */
+    }
+
+    /* When the container is hovered, show the description */
+    .hover-container:hover .description {
+        display: block;
+    }
 }
-
-/* Hide the description by default */
-.description {
-    display: none;
-    position: absolute;
-    top: 10px; /* adjust as needed */
-    left: 10px; /* adjust as needed */
-    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black background */
-    color: white;
-    padding: 10px;
-    border-radius: 5px; /* rounded corners */
-}
-
-/* When the container is hovered, show the description */
-.hover-container:hover .description {
-    display: block;
-}
-
-
-
-
