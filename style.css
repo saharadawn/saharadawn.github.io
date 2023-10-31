@@ -15,6 +15,34 @@ a {color: floralwhite;}
     justify-content: space-between;
 }
 
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;  /* Spacing between images */
+    justify-content: center;  /* Center images if there's extra space */
+}
+
+.image-gallery img {
+    flex: 1 /* This ensures each image takes up an equal width */
+    max-width: 100px;  /* You can adjust this to set a maximum width for each image */
+    height: 100px;
+    transition: transform 0.3s ease; /* For hover effect */
+}
+
+.hi img {
+    flex: 1 /* This ensures each image takes up an equal width */
+    max-width: 100px;  /* You can adjust this to set a maximum width for each image */
+    height: 50px;
+    transition: transform 0.3s ease; /* For hover effect */
+}
+
+.hi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;  /* Spacing between images */
+    justify-content: center;  /* Center images if there's extra space */
+}
 .item {
     width: 100px;
     height: 100px;
