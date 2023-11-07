@@ -51,14 +51,30 @@ body {background: black
 .image8{
     animation: scatter8 3s ease infinite;
 }
-.image9 {animation: scatter9 3s ease infinite
+.image9 {
+    animation: scatter9 3s ease infinite
 
 }
-.image10{animation: scatter10 3s ease infinite
+.image10{
+    animation: scatter10 3s ease infinite
 }
-.image11{animation: scatter11 3s ease infinite
+
+.image11{
+    animation: scatter11 3s ease infinite
 }
-.image12{animation: scatter12 3s ease infinite
+.image12{
+    animation: scatter12 3s ease infinite
+}
+
+.image13{
+    animation: scatter13 3s ease infinite
+
+
+}
+.image14{animation: scatter14 3s ease infinite
+
+}
+.image15{animation: scatter15 3s ease infinite
 }
 
 
@@ -81,7 +97,7 @@ body {background: black
         transform: translate(0, 0);
     }
     50% {
-        transform: translate(-100px, -100px);
+        transform: translate(-100px, -100px)rotate(20deg)
     }
     100% {
         transform: translate(0, 0);
@@ -93,7 +109,7 @@ body {background: black
         transform: translate(0, 0);
     }
     50% {
-        transform: translate(-100px, -100px);
+        transform: translate(50px, -70px) rotate(-70deg)
     }
     100% {
         transform: translate(0, 0);
@@ -203,6 +219,46 @@ body {background: black
     }
 }
 
+ @keyframes scatter13 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -90px) rotate(-100deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+@keyframes scatter14 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(60px, -120px) rotate(10deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+@keyframes scatter15 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(60px, 20px) rotate(50deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+
+
+
+
+
+
+
 
 body {
     margin: 0;
@@ -238,6 +294,10 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        background-color: blue
+    }
 
 
 
