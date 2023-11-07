@@ -1,0 +1,244 @@
+body {background: black
+ ;}
+
+ h1 {font-family: helvetica;
+  color: white}
+
+  h2{font-family: courier;
+    font-size: 12pt;
+  color: white }
+
+.text{
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.image {
+    transition: transform 1s ease;
+    max-width: 28%;
+   
+}
+
+.image1 {
+    animation: scatter1 3s ease infinite;
+}
+
+.image2 {
+    animation: scatter2 3s ease infinite;
+}
+
+.image3 {
+    animation: scatter3 3s ease infinite;
+}
+.image4 {
+    animation: scatter4 3s ease infinite;
+}
+.image5{
+    animation: scatter5 3s ease infinite;
+}
+.image6{
+    animation: scatter6 3s ease infinite;
+}
+.image7{
+    animation: scatter7 3s ease infinite;
+}
+.image8{
+    animation: scatter8 3s ease infinite;
+}
+.image9 {animation: scatter9 3s ease infinite
+
+}
+.image10{animation: scatter10 3s ease infinite
+}
+.image11{animation: scatter11 3s ease infinite
+}
+.image12{animation: scatter12 3s ease infinite
+}
+
+
+
+
+@keyframes scatter1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, 100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes scatter2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-100px, -100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes scatter3 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-100px, -100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+    @keyframes scatter4 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50px, -100px) rotate(-50deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+     @keyframes scatter5 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(30px, -30px) rotate(-20deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+     @keyframes scatter6 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-70px, -10px) rotate(40deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+
+ }
+     @keyframes scatter7 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, -30px) rotate(-20deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+     @keyframes scatter8 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -20px) rotate(-60deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+
+     @keyframes scatter9 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(200px, -20px) rotate(-20deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+ @keyframes scatter10 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-200px, 80px) rotate(70deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+
+ @keyframes scatter11 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(40px, 50px) rotate(-80deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+
+ @keyframes scatter12 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50px, 100px) rotate(0deg)
+    }
+    100% {
+        transform: translate(0, 0) 
+    }
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide horizontal scrollbar */
+    animation: shake 0.5s infinite; /* Apply the shake animation */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+
+
+
+
