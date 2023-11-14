@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ecf0f1; /* Set a light background color */
+}
+
+.image-container {
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+.animated-image {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    transition: transform 0.5s ease-out;
+}
+
+/* Additional styling for visual appeal */
+.animated-image:hover {
+    filter: brightness(1.2);
+}

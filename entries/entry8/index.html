@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Dispersion Animation</title>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    /* Style for the images */
+    .dispersed-image {
+      position: absolute;
+    }
+
+    /* Center the button */
+    #dispersionButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Clickable button to trigger the dispersion -->
+<button id="dispersionButton">CLICK ME!</button>
+
+<!-- Container to hold dispersed images -->
+<div id="dispersedContainer"></div>
+
+<script>
+  $(document).ready(function() {
+    // Function to disperse images
+    function disperseImages() {
+      // Number of images to disperse
+      var numberOfImages = 10;
+
+      for (var i = 0; i < numberOfImages; i++) {
+        // Create an image element
+        var img = $('<img class="dispersed-image" src="https://via.placeholder.com/50" alt="dispersed-image">');
+
+        // Set initial position (center of the button)
+        var initialPosition = $('#dispersionButton').position();
+        img.css({
+          top: initialPosition.top + 'px',
+          left: initialPosition.left + 'px'
+        });
+
+        // Append the image to the dispersed container
+        $('#dispersedContainer').append(img);
+
+        // Calculate a random position for each image
+        var targetPosition = {
+          top: Math.random() * $(window).height(),
+          left: Math.random() * $(window).width()
+        };
+
+        // Animate the image to the random position
+        img.animate(targetPosition, 1000, function() {
+          // Remove the image after the animation is complete
+          $(this).remove();
+        });
+      }
+    }
+
+    // Click event to trigger the dispersion
+    $('#dispersionButton').click(function() {
+      disperseImages();
+    });
+  });
+</script>
+
+</body>
+</html>
