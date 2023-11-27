@@ -10,6 +10,8 @@
     /* Style for the images */
     .dispersed-image {
       position: absolute;
+      width: 55px;\ /* Set the width of the images */
+      height: 55px; /* Set the height of the images */
     }
 
     /* Center the button */
@@ -19,12 +21,33 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
+    body {
+      background-color: blue; /* Change this color to your desired background color */
+    }
+
+    h1 {
+      font-family: helvetica;
+      color: white;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: courier;
+      color: white;
+      text-align: center;
+    }
+
+
   </style>
 </head>
 <body>
 
+  <h1> !! CLOSE UR TABS !! </h1>
+  <h2> 11.09.2023 </h2>
+
 <!-- Clickable button to trigger the dispersion -->
-<button id="dispersionButton">CLICK ME!</button>
+<button id="dispersionButton">*CLICK FOR TABS*</button>
 
 <!-- Container to hold dispersed images -->
 <div id="dispersedContainer"></div>
@@ -34,11 +57,23 @@
     // Function to disperse images
     function disperseImages() {
       // Number of images to disperse
-      var numberOfImages = 10;
+      var numberOfImages = 20;
+
+      // Array of different image URLs
+      var imageUrls = [
+        'chatgpt.png',
+        'googledocs.png',
+        'gmail.png',
+        'instagram.png',
+        // Add more image URLs as needed
+      ];
 
       for (var i = 0; i < numberOfImages; i++) {
+        // Choose a random image URL from the array
+        var randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+
         // Create an image element
-        var img = $('<img class="dispersed-image" src="https://via.placeholder.com/50" alt="dispersed-image">');
+        var img = $('<img class="dispersed-image" src="' + randomImageUrl + '" alt="dispersed-image">');
 
         // Set initial position (center of the button)
         var initialPosition = $('#dispersionButton').position();
@@ -59,7 +94,7 @@
         // Animate the image to the random position
         img.animate(targetPosition, 1000, function() {
           // Remove the image after the animation is complete
-          $(this).remove();
+          
         });
       }
     }
@@ -69,6 +104,7 @@
       disperseImages();
     });
   });
+
 </script>
 
 </body>
