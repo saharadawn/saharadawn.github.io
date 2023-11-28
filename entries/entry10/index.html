@@ -138,7 +138,7 @@
             popup.style.display = "block";
             displayedImages++;
 
-            if (displayedImages >= 10) {
+            if (displayedImages >= 20) {
                 createSpecialPopup();
             }
         }, Math.random() * 3000);
@@ -150,7 +150,7 @@
 
         var specialPopupText = document.createElement("div");
         specialPopupText.className = "special-popup-text";
-        specialPopupText.innerHTML = "FAILED! YOU HAVE 10 TABS OPEN!";
+        specialPopupText.innerHTML = "FAILED! YOU HAVE 20 TABS OPEN!";
         specialPopup.appendChild(specialPopupText);
 
         document.body.appendChild(specialPopup);
