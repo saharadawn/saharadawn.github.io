@@ -93,6 +93,17 @@
             text-align: center;
             color: #ff0000;
         }
+         /* Restart Button Styles */
+        .restart-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            font-family: courier;
+            color: red;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -143,7 +154,17 @@
         specialPopup.appendChild(specialPopupText);
 
         document.body.appendChild(specialPopup);
+    
+     // Add Restart Button
+        var restartButton = document.createElement("div");
+        restartButton.className = "restart-button";
+        restartButton.innerHTML = "TRY AGAIN";
+        restartButton.addEventListener("click", function () {
+            location.reload();
+        });
+        document.body.appendChild(restartButton);
     }
+
 
     function cascadePopups() {
         setInterval(createPopup, 500);
