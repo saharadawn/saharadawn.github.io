@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>entry9</title>
+    <h1> !! CLOSE UR TABS !! </h1>
+    <h2> 11.13.2023 </h2>
+    <style>
+        h1{
+            text-align: center;
+            color: white;
+            font-family: helvetica;
+        }
+        h2{
+            text-align: center;
+            color: white;
+            font-family: courier;
+        }
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: blue;
+        }
+
+        .image-container {
+            position: absolute;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .closeable-image {
+            width: 70px; /* Set your desired width */
+            height: 50px; /* Set your desired height */
+            margin-bottom: 5px; /* Adjust spacing between image and label */
+        }
+
+        .label {
+            font-size: 12px;
+            color: white;
+            font-family: helvetica;
+}
+          .background-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #666;
+
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.body;
+            const labelVariations = ["GOOGLE DOCS", "GMAIL", "AMAZON", "PINTEREST", 
+            "CHATGPT", "NETFLIX", "YOUTUBE"/* ... add more labels ... */];
+
+            // Create a large number of overlapping images with random labels
+            const numberOfImages = 100;
+            for (let i = 0; i < numberOfImages; i++) {
+                createCloseableImageWithRandomLabel();
+            }
+
+            function createCloseableImageWithRandomLabel() {
+                const containerDiv = document.createElement("div");
+                containerDiv.className = "image-container";
+
+                const image = new Image();
+                image.src = "folder.png"; // Replace with the path to your image
+                image.className = "closeable-image";
+
+                const randomLabel = labelVariations[Math.floor(Math.random() * labelVariations.length)];
+
+                const label = document.createElement("div");
+                label.className = "label";
+                label.textContent = randomLabel;
+
+                // Set random position within the window
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+
+                containerDiv.style.left = x + "px";
+                containerDiv.style.top = y + "px";
+
+                containerDiv.appendChild(image);
+                containerDiv.appendChild(label);
+                container.appendChild(containerDiv);
+
+                // Attach a click event to remove the container when clicked
+                containerDiv.addEventListener("click", function () {
+                    container.removeChild(containerDiv);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
