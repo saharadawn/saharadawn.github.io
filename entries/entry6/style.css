@@ -1,3 +1,40 @@
+
+  #home img {
+    width: 40px; /* Set the width to the desired size */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%; /* Allow the image to shrink responsively within its container */
+}
+ #next img {
+    width: 40px; /* Set the width to the desired size */
+    height: auto; /* Maintain the aspect ratio */
+    max
+    -width: 100%; /* Allow the image to shrink responsively within its container */
+}
+#back img {
+    width: 40px; /* Set the width to the desired size */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%; /* Allow the image to shrink responsively within its container */
+}
+
+
+header{
+    text-align: center;
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      padding: 5px;
+      font-family: helvetica;
+}
+
 h1 {
     font-family: courier;
     text-align: center;
