@@ -1,17 +1,17 @@
 
   #home img {
-    width: 40px; /* Set the width to the desired size */
+    width: 60px; /* Set the width to the desired size */
     height: auto; /* Maintain the aspect ratio */
     max-width: 100%; /* Allow the image to shrink responsively within its container */
 }
  #next img {
-    width: 40px; /* Set the width to the desired size */
+    width: 60px; /* Set the width to the desired size */
     height: auto; /* Maintain the aspect ratio */
     max
     -width: 100%; /* Allow the image to shrink responsively within its container */
 }
 #back img {
-    width: 40px; /* Set the width to the desired size */
+    width: 60px; /* Set the width to the desired size */
     height: auto; /* Maintain the aspect ratio */
     max-width: 100%; /* Allow the image to shrink responsively within its container */
 }
