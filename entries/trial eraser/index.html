@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #eraser {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            pointer-events: none; /* Ensure the eraser doesn't block mouse events */
+        }
+
+        #revealedImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+    <title>Mouse Eraser</title>
+</head>
+<body>
+    <div id="container">
+        <div id="eraser"></div>
+        <img id="revealedImage" src="DSCF1708.png" alt="Revealed Image">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.getElementById("container");
+            const eraser = document.getElementById("eraser");
+            const revealedImage = document.getElementById("revealedImage");
+
+            document.addEventListener("mousemove", function(event) {
+                const x = event.clientX;
+                const y = event.clientY;
+
+                eraser.style.left = x - eraser.offsetWidth / 2 + "px";
+                eraser.style.top = y - eraser.offsetHeight / 2 + "px";
+
+                const percentVisible = getPercentVisible(eraser, container);
+                revealedImage.style.opacity = 1 - percentVisible;
+            });
+        });
+
+        function getPercentVisible(element, container) {
+            const elementRect = element.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+
+            const intersectionRect = {
+                top: Math.max(elementRect.top, containerRect.top),
+                bottom: Math.min(elementRect.bottom, containerRect.bottom),
+                left: Math.max(elementRect.left, containerRect.left),
+                right: Math.min(elementRect.right, containerRect.right)
+            };
+
+            const intersectionArea = Math.max(0, intersectionRect.right - intersectionRect.left)
+                * Math.max(0, intersectionRect.bottom - intersectionRect.top);
+
+            const elementArea = (elementRect.right - elementRect.left) * (elementRect.bottom - elementRect.top);
+
+            return intersectionArea / elementArea;
+        }
+    </script>
+</body>
+</html>
+
+
