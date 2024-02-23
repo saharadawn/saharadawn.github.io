@@ -1,0 +1,119 @@
+html{
+    margin:0;
+    font-size:10px;
+    box-sizing:border-box;
+}
+
+body{
+    font-size:1.6rem;
+    margin:0;
+}
+
+.flex-container{
+    display:flex;
+    width:100vw;
+    height:100vh;
+}
+.desktop-image--left,
+.desktop-image--right,
+.tablet-image--left,
+.tablet-image--right,
+.mobile-image--left,
+.mobile-image--right{
+    display:none;/*hides the images*/
+} /*have nothing show at first*/
+
+.desktop-image--left {
+    width:58.3%; /*7/12 columns*/
+    height:100%;
+    object-fit: cover; /*don't skew image*, cover maxes out the boundaries, contain would have the full image show so no excess image being cut off*/
+}
+
+.desktop-image--right{
+    width:41.7%;
+    height:100%;
+    object-fit:cover;
+}
+
+.tablet-image--left {
+    width:100%; 
+    height:50%;
+    object-fit: cover; 
+}
+
+.tablet-image--right{
+    width:100%;
+    height:50%;
+    object-fit:cover;
+}
+
+.mobile-image--left {
+    width:100%; 
+    height:30%;
+    object-fit: cover; 
+}
+
+.mobile-image--right{
+    width:100%;
+    height:70%;
+    object-fit:cover;
+}
+
+/*@media (media query) tells brower at a certain point do sth*/
+@media screen and (max-width:499px) { /*at 499px show these images*/
+    .mobile-image--left,
+    .mobile-image--right{
+        display:block;
+    }
+    .flex-container{
+        flex-direction:column; /*makes flex vertical so images appear top and bottom*/
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:949px) { /*at 500px start these commands*/
+    .tablet-image--left,
+    .tablet-image--right{
+        display:block;
+    }
+    .flex-container{
+        flex-direction:column; /*makes flex vertical so images appear top and bottom*/
+    }
+}
+
+@media screen and (min-width:950px) { /*at 500px show these images*/
+    .desktop-image--left,
+    .desktop-image--right{
+        display:block;
+    }
+    
+}
+
+.toggle-container{
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform:translateX(-50%) translateY(-50%); /*shifting left by 50% and up by 50% since the top left corner is centered and not the whole shape*/
+    width:52rem;
+    height:19rem;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius:999rem;
+}
+
+.toggle-circle{
+    width:17.5rem;
+    height:17.5rem;
+    border-radius:999rem;
+    background:rgba(0,0,0,0.5);
+    position:absolute; /*makes the circle move freely within the container*/
+    left:0.5rem;
+    top:50%;
+    transform: translateY(-50%);
+    transition: transform 0.5 ease; /*transition*/
+}
+
+.toggle-container.is-active{
+    .toggle-circle{
+        transform: translateY(-50%) translateX(calc(34.3rem)); /*full container minus the button*/
+    }
+}
