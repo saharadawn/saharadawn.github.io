@@ -1,12 +1,25 @@
+
+@font-face {
+    font-family: 'xanhmono';
+    src: url('xanhmono.woff') format('woff'), url('xanhmono.woff') format('woff');
+}
 html, body {
     margin: 0;
     padding: 0;
+    text-align: justify;
 }
 
 body {
     font-family: Arial, sans-serif;
 }
-
+.header-container{
+    font-family: xanhmono;
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    justify-content: space-between;
+    width: 100%;
+}
 .flex-container {
     display: flex;
     justify-content: center;
@@ -14,10 +27,11 @@ body {
 }
 
 
+
 .desktop-video {
     width: 50%;
     height: 50%;
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding: 0;
 }
 
@@ -37,6 +51,17 @@ body {
         padding: 0;
     }
 
+    .footer-container{
+        font-family: xanhmono;
+        text-align: center;
+        width: 100%;
+        margin: 1rem;
+    }
+
+    .footer1{
+        color: white;
+        position: sticky;
+    }
 
 
 
@@ -44,6 +69,15 @@ body {
 @media screen and (max-width: 767px) {
     body{
         background-color: black;
+    }
+    .header1{
+        color: white;
+    }
+    .header2{
+        color: white;
+    }
+    .header3{
+        color: red;
     }
     .desktop-video, .tablet-video {
         display: none;
@@ -54,6 +88,15 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .header1{
+        color: black;
+    }
+    .header2{
+        color: red;
+    }
+    .header3{
+        color: black;
+    }
     .desktop-video, .mobile-video {
         display: none;
     }
@@ -63,6 +106,15 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+    .header1{
+        color: red;
+    }
+    .header2{
+        color: white
+    }
+    .header3{
+        color: white
+    }
     body{
         background-color: black;
     }
@@ -71,5 +123,11 @@ body {
     }
     .desktop-video {
         display: block;
+    }
+    .footer2, .footer3{
+        display: none;
+    }
+    .footer1{
+        display: block
     }
 }
