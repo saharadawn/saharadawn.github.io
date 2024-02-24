@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>media tunnel</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Responsive Videos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
+        <header>
+            GOOGLE MAPS 
+        </header>
         <div class="flex-container">
-            <video class="desktop-image--left" src="./IMG_3331.mov" alt="earth"/> <!-- highlight opt command d selects the next content that is the same -->
-            <video class="desktop-image--right" src="./IMG_4145.mov" alt="horses"/>
-            <img class="tablet-image--left" src="./assets/flower.jpg" alt="flower"/>
-            <img class="tablet-image--right" src="./assets/bee.jpg" alt="bee"/>
-            <img class="mobile-image--left" src="./assets/storm.jpg" alt="storm"/>
-            <img class="mobile-image--right" src="./assets/butterfly.jpg" alt="butterfly"/>
-        
+            <video class="video desktop-video" src="max.mov" autoplay muted loop></video>
+        </div>
+        <div class="flex-container">
+            <video class="video tablet-video" src="mid.mov" autoplay muted loop></video>
+        </div>
+        <div class="flex-container">
+            <video class="video mobile-video" src="min.mov" autoplay muted loop></video>
+        </div>
     </main>
-    <script type="text/javascript" src="./script.js" defer></script>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
