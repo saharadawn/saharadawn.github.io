@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FANTASTIC MR. FOX</title>
+    <link rel="stylesheet" href="./style.css" />
+    
+</head>
+<body>
+<header> A FILM BY WES ANDERSON </header>
+<br>
+<div class="title">
+    FANTASTIC MR.FOX
+</div>
+<div class="sub1">
+    (MR.FOX)
+</div>
+<div class="sub2">
+    (MRS.FOX)
+</div>
+
+<div id="text-container">
+    <p id="text"></p>
+</div>
+
+<!-- Yellow Image -->
+<img class="bottom-right-image" src="mrfox.png" alt="Yellow Image">
+
+<!-- Red Image -->
+<img class="bottom-left-image" src="mrsfox.png" alt="Red Image">
+
+<script>
+    const texts = [
+        "I don’t want to live in a hole anymore. It makes me feel poor.",
+        "We are poor -- but we’re happy.",
+        "Comme-ci, comme-ça. Anyway, the views are better above ground.",
+        "You know, Foxes live in holes for a reason.",
+        "I’m seven non-fox-years old now. My father died at seven and a half. I don’t want to live in a hole anymore."
+    ];
+    const textContainer = document.getElementById('text');
+    let index = 0;
+
+    function type() {
+        if (index < texts.length) {
+            // Change background color from yellow to red when starting a new sentence
+            document.body.style.backgroundColor = index % 2 === 0 ? 'yellow' : 'red';
+
+            const currentText = texts[index];
+            let currentIndex = 0;
+            const typingInterval = setInterval(() => {
+                if (currentIndex < currentText.length) {
+                    textContainer.innerHTML += currentText.charAt(currentIndex);
+                    currentIndex++;
+                } else {
+                    clearInterval(typingInterval);
+                    setTimeout(erase, 1000); // Wait 1 second before erasing
+                }
+            }, 50);
+        }
+    }
+
+    function erase() {
+        let currentIndex = textContainer.innerHTML.length;
+        const erasingInterval = setInterval(() => {
+            if (currentIndex > 0) {
+                textContainer.innerHTML = textContainer.innerHTML.slice(0, currentIndex - 1);
+                currentIndex--;
+            } else {
+                clearInterval(erasingInterval);
+                index++;
+                if (index >= texts.length) {
+                    index = 0; // Reset index to 0 if it exceeds the length of texts array
+                }
+                setTimeout(type, 1000); // Wait 1 second before typing new text
+            }
+        }, 50);
+    }
+
+    type();
+
+    // Toggle images based on background color
+    function toggleImages() {
+        const backgroundColor = document.body.style.backgroundColor;
+        if (backgroundColor === 'yellow') {
+            document.querySelector('.bottom-right-image').style.display = 'block';
+            document.querySelector('.bottom-left-image').style.display = 'none';
+        } else if (backgroundColor === 'red') {
+            document.querySelector('.bottom-left-image').style.display = 'block';
+            document.querySelector('.bottom-right-image').style.display = 'none';
+        }
+    }
+
+    // Initially toggle images based on initial background color
+    toggleImages();
+
+    // Listen for background color changes and toggle images accordingly
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            if (mutation.attributeName === 'style') {
+                toggleImages();
+            }
+        });
+    });
+
+    // Observe changes to the style attribute of the body element
+    observer.observe(document.body, { attributes: true });
+</script>
+</body>
+</html>

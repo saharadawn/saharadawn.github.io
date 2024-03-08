@@ -1,0 +1,40 @@
+html {
+  margin: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  height:300rem;
+}
+
+.squirrel{
+  display:flex;
+  position:fixed;
+}
+
+.block{
+  width:100vw;
+  height:100vh;
+}
+.tree{
+  display:flex;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+}
+
+.street{
+  width:50%;
+  background: linear-gradient(to bottom, red, yellow);
+  height:300rem;
+}
+
+.car{
+  width:50%;
+  background: linear-gradient(to bottom, blue, green);
+  height:180rem;
+}
