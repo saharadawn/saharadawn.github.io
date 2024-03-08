@@ -49,10 +49,11 @@ main {
   left: 50%; /* Adjust positioning as needed */
   transform: translate(-50%, -50%);
   text-transform:uppercase;
+  background-color: black;
   color: red; /* Adjust text color */
   padding: 0.5rem; /* Adjust padding */
   font-family: 'xanhmono'; /* Adjust font family */
-  font-size: 1.5rem; /* Adjust font size */
+  font-size: 1rem; /* Adjust font size */
   text-align: center;
   z-index: 1; /* Ensure text is above the image */
 }
