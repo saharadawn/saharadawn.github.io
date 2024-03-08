@@ -131,6 +131,8 @@ header img{
       color: black;
       font-size: 5rem;
       line-height: 5rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
   }
   .footer{
     margin-top: 1.5rem;
