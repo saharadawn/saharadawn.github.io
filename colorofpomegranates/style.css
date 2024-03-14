@@ -126,6 +126,8 @@ header img{
 @media screen and (max-width: 767px) {
   .grid-item:hover::after {
     font-size: 1rem;
+    color: red;
+    background-color: black;
   }
   .text{
       color: black;
