@@ -22,64 +22,80 @@
 },
 {
     "course": "wouldeat",
-    "image": "food5.jpeg"
+    "image": "food5.jpeg",
+    "name": "Whitebait with Tartare"
 },
 {
     "course": "wouldeatifpaid",
-    "image": "food6.jpeg"
+    "image": "food6.jpeg",
+    "name": "Chip Butty???"
 },
 {
     "course": "wouldeat",
-    "image": "food7.jpeg"
+    "image": "food7.jpeg",
+    "name": "Ruby Pear & Custard"
 },
 {
     "course": "wouldnoteat",
-    "image": "food8.jpeg"
+    "image": "food8.jpeg",
+    "name": "Cods Roe & Frazzles"
 },
 {
     "course": "wouldeat",
-    "image": "food9.jpeg"
+    "image": "food9.jpeg",
+    "name": "Manchester Pudding"
 },
 {
     "course": "wouldeat",
-    "image": "food10.jpeg"
+    "image": "food10.jpeg",
+    "name": "Tomato Toast"
 },
 {
     "course": "wouldnoteat",
-    "image": "food11.jpeg"
+    "image": "food11.jpeg",
+    "name": "Ham, Asparagus, Egg"
 },
 {
     "course": "wouldeat",
-    "image": "food12.jpeg"
+    "image": "food12.jpeg",
+    "name": "Fish & Mushy Peas"
 },
 {
     "course": "wouldeat",
-    "image": "food13.jpeg"
+    "image": "food13.jpeg",
+    "name": "Tottenham Cake"
 },
 {
     "course": "wouldeat",
-    "image": "food14.jpeg"
+    "image": "food14.jpeg",
+    "name": "Cornish Pastry"
 },
 {
     "course": "wouldnoteat",
-    "image": "food15.jpeg"
+    "image": "food15.jpeg",
+    "name": "Battered Sausage + House Sauce"
 },{
     "course": "wouldnoteat",
-    "image": "food16.jpeg"
+    "image": "food16.jpeg",
+    "name": "?? NO IDEA TBH"
 },{
     "course": "wouldeatifpaid",
-    "image": "food17.jpeg"
+    "image": "food17.jpeg",
+    "name": "Bolognese on Chips"
 },
 {
     "course": "wouldeat",
-    "image": "food18.jpeg"
+    "image": "food18.jpeg",
+    "name": "Pork Twizzlers"
 },
 {
     "course": "wouldeat",
-    "image": "food19.jpeg"
+    "image": "food19.jpeg",
+    "name": "Poached Plums & Cream"
 },
 {
     "course": "wouldnoteat",
-    "image": "food20.jpeg"
+    "image": "food20.jpeg",
+    "name": "Black Pudding & Egg"
 }
 ]
