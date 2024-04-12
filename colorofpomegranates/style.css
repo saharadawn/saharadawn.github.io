@@ -29,8 +29,8 @@ main {
 }
 
 .grid-item img { 
-  width: 100%; /* Make the image fill the entire grid item */
-  height: 100%; /* Make the image fill the entire grid item */
+  width: 50%; /* Make the image fill the entire grid item */
+  height: 50%; /* Make the image fill the entire grid item */
   object-fit: cover; /* Maintain aspect ratio while covering the entire grid item */
   position: absolute;
   transition: transform 0.3s ease;

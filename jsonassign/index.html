@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./reset.css"/>
+</head>
+<body>
+    <div id="title-screen">
+        <div class="H1">NORMAN'S CAFE, LONDON</div>
+        <div id="image-cycle"></div>
+        <div class="H2">BRITAIN'S FINEST FOOD</div>
+    </div>
+
+    <main style="display: none;">
+     
+        <div class="title"> NORMAN'S CAFE, LONDON</div>
+        <div class="header">
+            <div class="header1">
+            WOULD EAT = APPETIZING, CURIOUS TO TRY</div>
+            <div class="header2">
+            WOULD NOT EAT = LOOKS HORRID, DOWNFALL OF BRITISH CUISINE</div>
+            <div class="header3">
+            WOULD EAT IF PAID = WOULD RATHER NOT, BUT FOR $5 I WOULD CONSIDER </div>
+        </div>
+        <div class="button-container">
+            <button class="filter-btn" data-course="all">All</button>
+            <button class="filter-btn" data-course="wouldeat">Would Eat</button>
+            <button class="filter-btn" data-course="wouldnoteat">Would Not Eat</button>
+            <button class="filter-btn" data-course="wouldeatifpaid">Would Eat If Paid</button>
+        </div>
+        <div class="food-container"></div>
+    </main>
+    
+    
+
+    <script>
+        // Get the title screen and main section elements
+        const titleScreen = document.getElementById('title-screen');
+        const mainSection = document.querySelector('main');
+
+        // Add click event listener to the title screen
+        titleScreen.addEventListener('click', function() {
+            // Toggle the display of the main section
+            mainSection.style.display = mainSection.style.display === 'none' ? 'block' : 'none';
+            // Hide the title screen when main section is displayed
+            titleScreen.style.display = mainSection.style.display === 'none' ? 'block' : 'none';
+        });
+
+        let foodContainer = document.querySelector('.food-container');
+        let filterButtons = document.querySelectorAll('.filter-btn');
+        let items; // Declare items variable
+
+        // Fetch JSON data from data.json file
+        fetch('./data.json')
+            .then(response => response.json())
+            .then(data => {
+                items = data; // Assign fetched data to items variable
+                // Render all items initially
+                renderItems(items);
+            });
+
+        function renderItems(items) {
+            foodContainer.innerHTML = '';
+            items.forEach(item => {
+                let foodItemContainer = document.createElement('div'); // Create a container for each food item
+                foodItemContainer.classList.add('food-item-container');
+
+                let foodItem = document.createElement('img');
+                foodItem.src = item.image;
+                foodItem.alt = item.type;
+                foodItem.style.backgroundColor = item.color;
+                foodItem.classList.add('food-item');
+
+                let foodItemText = document.createElement('div');
+                foodItemText.textContent = item.name; // Assuming 'name' is the property in your JSON for the text
+                foodItemText.classList.add('food-item-text'); // Add a class to style the text
+                foodItemText.style.display = 'none'; // Initially hide the text
+
+                foodItemContainer.append(foodItem, foodItemText); // Append both image and text to the container
+                foodContainer.append(foodItemContainer);
+
+                // Add event listeners for mouseover and mouseout events
+                foodItemContainer.addEventListener('mouseover', () => {
+                    foodItemText.style.display = 'block';
+                });
+
+                foodItemContainer.addEventListener('mouseout', () => {
+                    foodItemText.style.display = 'none';
+                });
+            });
+        }
+
+        // Function to handle filtering
+        function handleFilter(course) {
+            let filteredItems;
+            if (course === 'all') {
+                // Show all items if "All" button is clicked
+                filteredItems = items;
+            } else {
+                // Filter items based on the selected course
+                filteredItems = items.filter(item => item.course === course);
+            }
+            renderItems(filteredItems);
+        }
+
+        // Add event listeners to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const course = button.getAttribute('data-course');
+                handleFilter(course);
+            });
+        });
+
+    </script>
+</body>
+</html>

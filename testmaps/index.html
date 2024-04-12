@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Street View Example</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        function getRandomLocation(center, maxDistance) {
+            // Convert latitude and longitude from degrees to radians
+            var lat1 = center.lat * Math.PI / 180;
+            var lng1 = center.lng * Math.PI / 180;
+
+            // Generate a random bearing (direction) in radians
+            var bearing = Math.random() * 2 * Math.PI;
+
+            // Generate a random distance within the maximum distance
+            var distance = Math.random() * maxDistance;
+
+            // Earth's radius in meters
+            var radius = 6371000;
+
+            // Calculate new latitude and longitude
+            var lat2 = Math.asin(Math.sin(lat1) * Math.cos(distance / radius) +
+                        Math.cos(lat1) * Math.sin(distance / radius) * Math.cos(bearing));
+            var lng2 = lng1 + Math.atan2(Math.sin(bearing) * Math.sin(distance / radius) * Math.cos(lat1),
+                                 Math.cos(distance / radius) - Math.sin(lat1) * Math.sin(lat2));
+
+            // Convert back from radians to degrees
+            lat2 = lat2 * 180 / Math.PI;
+            lng2 = lng2 * 180 / Math.PI;
+
+            return {lat: lat2, lng: lng2};
+        }
+
+        function initMap() {
+            // Define central location
+            var centerLocation = {lat: 40.7128, lng: -74.0060}; // New York City coordinates
+
+            // Define maximum distance from central location (in meters)
+            var maxDistance = 1000;
+
+            // Generate random location within the range of street view
+            var randomLocation = getRandomLocation(centerLocation, maxDistance);
+
+            // Create a map centered at the random location
+            var map = new google.maps.Map(document.getElementById("map"), {
+                center: randomLocation,
+                zoom: 14 // Adjust the zoom level as needed
+            });
+
+            // Create a Street View Service object
+            var streetViewService = new google.maps.StreetViewService();
+
+            // Define a Street View request
+            var streetViewRequest = {
+                location: randomLocation,
+                preference: google.maps.StreetViewPreference.NEAREST,
+                radius: 50, // Search within 50 meters radius
+                source: google.maps.StreetViewSource.OUTDOOR // Ensure outdoor view
+            };
+
+            // Retrieve a Street View panorama (image)
+            streetViewService.getPanorama(streetViewRequest, function(data, status) {
+                if (status === 'OK') {
+                    // Display the Street View panorama
+                    var panorama = new google.maps.StreetViewPanorama(
+                        document.getElementById('map'), {
+                            pano: data.location.pano,
+                            pov: {
+                                heading: 0, // Adjust heading as needed
+                                pitch: 0 // Adjust pitch as needed
+                            },
+                            visible: true
+                        });
+                    map.setStreetView(panorama);
+                } else {
+                    // Handle error
+                    console.error('Street View data not found for this location:', status);
+                }
+            });
+        }
+    </script>
+    <!-- Load the Google Maps JavaScript API -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3f65XaCAyZAfkqnlnj_D0ruxgtyxU0HI&callback=initMap">
+    </script>
+</body>
+</html>

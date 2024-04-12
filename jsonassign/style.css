@@ -1,0 +1,111 @@
+html{
+    margin:0;
+    font-size:10px;
+    box-sizing:border-box;
+}
+
+body{
+    font-size:1.6rem;
+    margin:0;
+    background-color: orangered;
+
+    
+}
+
+
+.sort-btn{
+    width: 10rem,
+}
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows */
+    gap: 8rem; /* Adjust the gap between items */
+    padding: 4rem; /* Optional: Add padding around the grid */
+ 
+    
+    
+}
+
+.food-item {
+    width: 100%; /* Make sure each item fills its grid cell */
+    height: 100%; /* Make sure each item fills its grid cell */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+}
+.food-item-text {
+    color: goldenrod;
+    font-family: fam;
+    text-align: center;
+
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: fam;
+    color: orangered;
+    background-color: goldenrod;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+
+
+#title-screen{
+    display: flex;
+    flex-direction: column;
+    font-family: fam;
+    color: orangered;
+    background-color: goldenrod;
+    text-align: center; /* Center text horizontally */
+    height: 100vh;
+    display: flex; /* Use flexbox for vertical alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.H1{
+    font-size: 4rem;
+}
+.H2{
+    font-size: 3rem;
+    color: blanchedalmond;
+}
+
+.title{
+    font-family: fam;
+    color: orangered;
+    font-size: 4rem;
+    background-color: goldenrod;
+    text-align: center;
+padding: 2rem;
+
+   
+}
+
+@font-face {
+    font-family: 'fam';
+    src: url('famgrotesk.woff') format('woff'), url('famgrotesk.woff') format('woff');
+  }
+
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.filter-btn {
+    margin: 2rem;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-family: fam;
+    color:goldenrod;
+    border: 2px solid goldenrod; /* Add border with 2px width and solid style */
+
+   
+}
+
+

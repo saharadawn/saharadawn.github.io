@@ -1,0 +1,39 @@
+[
+    {
+        "type": "pasta",
+        "course": "main",
+        "price": "20",
+        "color": "yellow"
+    
+    },
+    {
+       "type": "apples",
+       "course": "appetizer",
+       "price": "7",
+       "color": "red"
+    },
+    {
+        "type": "ribeye",
+        "course": "main",
+        "price": "40",
+        "color": "brown"
+    },
+    {
+        "type": "gum",
+        "course": "dessert",
+        "price": "1",
+        "color": "pink"
+    },
+    {
+        "type": "croissant",
+        "course": "appetizer",
+        "price": "4",
+        "color": "beige"
+    },
+    {
+        "type": "omakase",
+        "course": "main",
+        "price": "300",
+        "color": "green"
+    }
+]
