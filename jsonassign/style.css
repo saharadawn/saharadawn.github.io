@@ -21,10 +21,7 @@ body{
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
     grid-template-rows: repeat(5, 1fr); /* 5 rows */
     gap: 8rem; /* Adjust the gap between items */
-    padding: 4rem; /* Optional: Add padding around the grid */
- 
-    
-    
+    padding: 4rem; /* Optional: Add padding around the grid */  
 }
 
 .food-item {
@@ -32,13 +29,7 @@ body{
     height: 100%; /* Make sure each item fills its grid cell */
     object-fit: cover; /* Ensure the image fills the container without distortion */
 }
-.food-item-text {
-    color: goldenrod;
-    font-family: fam;
-    text-align: center;
-
-
-}
+ 
 
 .header {
     display: flex;
@@ -80,9 +71,7 @@ body{
     font-size: 4rem;
     background-color: goldenrod;
     text-align: center;
-padding: 2rem;
-
-   
+padding: 2rem;  
 }
 
 @font-face {
@@ -104,8 +93,27 @@ padding: 2rem;
     font-family: fam;
     color:goldenrod;
     border: 2px solid goldenrod; /* Add border with 2px width and solid style */
-
-   
 }
 
+@media screen and (max-width: 600px) {
+    .food-container {
+        display: block; /* Change to block layout for single column */
+        padding: 2rem; /* Adjust padding as needed */
+    }
 
+    .food-item {
+        width: 100%; /* Occupy full width of the container */
+        height: auto; /* Auto height to maintain aspect ratio */
+        max-width: 100%; /* Ensure image doesn't exceed container width */
+        margin-bottom: 2rem; /* Add some space between items */
+    }
+}
+
+.filter-btn {
+    flex-direction: column;
+    display: flex;;
+}
+
+.header{
+    font-size: 1rem;
+}
