@@ -30,6 +30,12 @@ body{
     object-fit: cover; /* Ensure the image fills the container without distortion */
 }
  
+.food-item {
+    width: 100%; /* Make sure each item fills its grid cell */
+    height: 100%; /* Make sure each item fills its grid cell */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+}
+ 
 
 .header {
     display: flex;
@@ -74,6 +80,12 @@ body{
 padding: 2rem;  
 }
 
+.food-item-text{
+    font-family: fam;
+    color: goldenrod;
+    text-align: center;
+ }
+
 @font-face {
     font-family: 'fam';
     src: url('famgrotesk.woff') format('woff'), url('famgrotesk.woff') format('woff');
@@ -101,12 +113,7 @@ padding: 2rem;
         padding: 2rem; /* Adjust padding as needed */
     }
 
-    .food-item {
-        width: 100%; /* Occupy full width of the container */
-        height: auto; /* Auto height to maintain aspect ratio */
-        max-width: 100%; /* Ensure image doesn't exceed container width */
-        margin-bottom: 2rem; /* Add some space between items */
-    }
+ 
     .filter-btn {
         flex-direction: column;
         display: flex;;
