@@ -2,61 +2,50 @@
 /* Add this to your existing CSS */
 
 /* Header styles */
-header {
-    position: fixed;
-    top: 0;
-    right: 0;
+/* Header styles */
+.header {
+    position: absolute;
+    width: 97%;
 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: white;
-    padding: 10px;
+    padding: 20px;
+    padding-top: 5px;
     display: flex;
     align-items: center;
-    z-index: 1000; /* Ensure header is above other content */
+    justify-content: space-between; /* Ensures equal spacing between the children */
+    z-index: 1000;
+
 }
 
 /* Menu toggle button styles */
 .menu-toggle {
     cursor: pointer;
-    font-size: 2rem;
-    margin-left: auto; /* Push it to the right */
-    margin-bottom: 2rem;
-
+    font-size: 1rem;
 }
 
-/* Side panel styles */
-.side-panel {
-    position: fixed;
-    top: 0;
-    right: -300px; /* Initially hidden */
-    width: 300px; /* Adjust width as needed */
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity for the frosted effect */
-    backdrop-filter: blur(8px); /* Adjust the blur effect as needed */
-    -webkit-backdrop-filter: blur(8px); /* For Safari */
-    transition: right 0.3s ease-in-out;
-    z-index: 999; /* Ensure side panel is above other content */
-    display: flex; /* Flex container */
-    flex-direction: column; /* Arrange items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: flex-start; /* Align items to the left */
-
+.left,
+.right {
+    display: flex;
+    align-items: center;
 }
 
-.side-panel.open {
-    right: 0; /* Show side panel */
+.left {
+    justify-content: flex-start; /* Align items to the left */
 }
 
-.contact-info,
-.about {
-    padding: 20px; /* Add some padding */
-    text-align: left; /* Center text */
+.right {
+    justify-content: flex-start; /* Align items to the right */
+    width: auto; 
 }
 
-.contact,
-.about {
-    margin-bottom: 20px; /* Add some space between sections */
-    text-align: left; /* Center text */
-}
+
+
+
+
+
+
 
 
 
@@ -116,12 +105,12 @@ body {
     background-color: transparent; /* Set background to transparent */
     font-size: 7rem;
     line-height: 5rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
 }
 
 .project-title {
-    
+    letter-spacing: -4px;
 
     padding: 10px 20px;
     border-radius: 5px;
@@ -136,6 +125,7 @@ body {
 .number{
     font-size:4rem ;
 }
+
 
 .project-section {
     margin-bottom: 100px;
