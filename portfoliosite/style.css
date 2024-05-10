@@ -222,5 +222,10 @@ body {
   
 
 }
+a {
+    color: inherit; /* Inherit text color */
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Set position relative to allow absolute positioning of the pseudo-element */
+}
 
 }
