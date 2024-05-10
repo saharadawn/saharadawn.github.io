@@ -38,9 +38,12 @@
 .right {
     justify-content: flex-start; /* Align items to the right */
     width: auto; 
+    color: black;
 }
 
-
+.a{
+    color: black;
+}
 
 
 
@@ -199,6 +202,8 @@ body {
 
 @media (max-width: 480px) {
     .number{
+        font-size: 1.5rem;
+    }
     .project-titles {
         font-size: 1.5rem; /* Further decrease font size */
     }
@@ -222,10 +227,6 @@ body {
   
 
 }
-a {
-    color: inherit; /* Inherit text color */
-    text-decoration: none; /* Remove default underline */
-    position: relative; /* Set position relative to allow absolute positioning of the pseudo-element */
-}
 
-}
+
+
