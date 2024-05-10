@@ -1,0 +1,236 @@
+
+/* Add this to your existing CSS */
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+/* Menu toggle button styles */
+.menu-toggle {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: auto; /* Push it to the right */
+    margin-bottom: 2rem;
+
+}
+
+/* Side panel styles */
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hidden */
+    width: 300px; /* Adjust width as needed */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity for the frosted effect */
+    backdrop-filter: blur(8px); /* Adjust the blur effect as needed */
+    -webkit-backdrop-filter: blur(8px); /* For Safari */
+    transition: right 0.3s ease-in-out;
+    z-index: 999; /* Ensure side panel is above other content */
+    display: flex; /* Flex container */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: flex-start; /* Align items to the left */
+
+}
+
+.side-panel.open {
+    right: 0; /* Show side panel */
+}
+
+.contact-info,
+.about {
+    padding: 20px; /* Add some padding */
+    text-align: left; /* Center text */
+}
+
+.contact,
+.about {
+    margin-bottom: 20px; /* Add some space between sections */
+    text-align: left; /* Center text */
+}
+
+
+
+
+p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+ 
+
+}
+
+.contact-info{
+z-index: 1000
+}
+
+/* CSS for the landing page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+
+}
+
+.landing {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity for the frosted effect */
+    backdrop-filter: blur(8px); /* Adjust the blur effect as needed */
+    -webkit-backdrop-filter: blur(8px); /* For Safari */
+    z-index: 1;
+
+}
+
+
+.project-titles {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    flex-wrap: wrap;
+    z-index: 2;
+    top: 20px; /* Adjust vertical position as needed */
+    left: 20px; /* Adjust horizontal position as needed */
+    background-color: transparent; /* Set background to transparent */
+    font-size: 7rem;
+    line-height: 5rem;
+    margin-top: 1rem;
+
+}
+
+.project-title {
+    
+
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px; /* Adjust spacing between titles */
+    cursor: pointer;
+}
+
+/* CSS for the content section */
+.content {
+    padding: 50px;
+}
+.number{
+    font-size:4rem ;
+}
+
+.project-section {
+    margin-bottom: 100px;
+    border-bottom: 1px solid #ddd; /* Divider line */
+
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+}
+.carousel-item {
+    flex: 0 0 auto;
+    width: 60%;
+    scroll-snap-align: start;
+    margin: 2rem;
+
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the bottom */
+}
+
+.carousel-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Button for scrolling to top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+ font-size: 2rem;
+    cursor: pointer;
+    z-index: 999; /* Ensure it's above other content */
+    display: none; /* Initially hidden */
+}
+
+.scroll-to-top.show {
+    display: block; /* Show when scrolled down */
+}
+ /* Media queries for responsive design */
+ @media (max-width: 768px) {
+    .project-titles {
+        font-size: 2rem; /* Decrease font size */
+    }
+    .project-section {
+        padding: 10px; /* Adjust padding */
+      
+    }
+    .carousel-item {
+        width: calc(100% - 20px); /* Adjust width */
+        
+    }
+    .scroll-to-top {
+        font-size: 20px; /* Adjust font size */
+        bottom: 10px; /* Adjust position */
+        right: 10px; /* Adjust position */
+        padding: 8px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .number{
+    .project-titles {
+        font-size: 1.5rem; /* Further decrease font size */
+    }
+    .project-section {
+        margin-bottom: 20px; /* Further reduce margin */
+    }
+    .carousel-item {
+        width: calc(100% - 10px); /* Further adjust width */
+        padding: 5px; /* Further adjust padding */
+    }
+    .scroll-to-top {
+        font-size: 18px; /* Further adjust font size */
+        bottom: 5px; /* Further adjust position */
+        right: 5px; /* Further adjust position */
+        padding: 6px; /* Further adjust padding */
+    }
+}
+.title-columns {
+    display: flex;
+    flex-direction: column;
+  
+
+}
+
+}

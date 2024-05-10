@@ -3,208 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <style>
-        header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-    color: white;
-    z-index: 5;
-
-}
-
-
-
-
-        p {
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.3rem;
-         
-
-        }
-
-      .contact-info{
-        z-index: 1000
-      }
-
-        /* CSS for the landing page */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: black;
-        }
-
-        .landing {
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .project-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity for the frosted effect */
-            backdrop-filter: blur(8px); /* Adjust the blur effect as needed */
-            -webkit-backdrop-filter: blur(8px); /* For Safari */
-            z-index: 1;
-        }
-
-
-        .project-titles {
-            display: flex;
-            flex-direction: row;
-            position: absolute;
-            flex-wrap: wrap;
-            z-index: 2;
-            top: 20px; /* Adjust vertical position as needed */
-            left: 20px; /* Adjust horizontal position as needed */
-            background-color: transparent; /* Set background to transparent */
-            font-size: 7rem;
-            line-height: 5rem;
-        }
-
-        .project-title {
-            
-    
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-right: 10px; /* Adjust spacing between titles */
-            cursor: pointer;
-        }
-
-        /* CSS for the content section */
-        .content {
-            padding: 50px;
-        }
-        .number{
-            font-size:4rem ;
-        }
-
-        .project-section {
-            margin-bottom: 100px;
-            border-bottom: 1px solid #ddd; /* Divider line */
-       
-        }
-
-        .carousel {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
-        }
-        .carousel-item {
-            flex: 0 0 auto;
-            width: 60%;
-            scroll-snap-align: start;
-            margin: 2rem;
-       
-            box-sizing: border-box;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end; /* Align items to the bottom */
-        }
-
-        .carousel-image {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Button for scrolling to top */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 999; /* Ensure it's above other content */
-            display: none; /* Initially hidden */
-        }
-
-        .scroll-to-top.show {
-            display: block; /* Show when scrolled down */
-        }
-         /* Media queries for responsive design */
-         @media (max-width: 768px) {
-            .project-titles {
-                font-size: 2rem; /* Decrease font size */
-            }
-            .project-section {
-                padding: 10px; /* Adjust padding */
-              
-            }
-            .carousel-item {
-                width: calc(100% - 20px); /* Adjust width */
-                
-            }
-            .scroll-to-top {
-                font-size: 20px; /* Adjust font size */
-                bottom: 10px; /* Adjust position */
-                right: 10px; /* Adjust position */
-                padding: 8px; /* Adjust padding */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .number{
-            .project-titles {
-                font-size: 1.5rem; /* Further decrease font size */
-            }
-            .project-section {
-                margin-bottom: 20px; /* Further reduce margin */
-            }
-            .carousel-item {
-                width: calc(100% - 10px); /* Further adjust width */
-                padding: 5px; /* Further adjust padding */
-            }
-            .scroll-to-top {
-                font-size: 18px; /* Further adjust font size */
-                bottom: 5px; /* Further adjust position */
-                right: 5px; /* Further adjust position */
-                padding: 6px; /* Further adjust padding */
-            }
-        }
-        .title-columns {
-            display: flex;
-            flex-direction: column;
-          
-
-        }
-       
-    </style>
+    <title>Sahara Dawn K. Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <div class="menu-toggle" onclick="toggleSidePanel()">?</div>
+    </header>
+
 
 <div class="landing" id="landing">
+    
     <!-- Placeholder for the image -->
     <img src="" alt="Project Image" id="projectImage">
     <!-- Frosted overlay -->
     <div class="project-overlay"></div>
     <!-- Placeholder for the project titles -->
     <div class="project-titles">
+        
         <span class="project-title" onclick="scrollToSection('project1')"><span class="number">(1)</span>Open Pas </span>
         <span class="project-title" onclick="scrollToSection('project2')"><span class="number">(2)</span>La Maison Volpé</span>
         <span class="project-title" onclick="scrollToSection('project3')"><span class="number">(3)</span>15 Found Photos</span>
         <span class="project-title" onclick="scrollToSection('project4')"><span class="number">(4)</span>Crew Zine</span>
         <span class="project-title" onclick="scrollToSection('project5')"><span class="number">(5)</span>Final_072.pdf</span>
     </div>
-    <header> <p>HELLO</p> </header>
+
 </div>
 
 
@@ -360,58 +183,28 @@
         <img src="final6.png" alt="Project 2 Image" class="carousel-image">
     </div>
 </div>
+<div class="side-panel" id="sidePanel">
+    <!-- Contact Info -->
+    <div class="contact-info">
+        <div class="contact">
+            <p>Contact</p>
+            <p>saharadawnk@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- About Paragraph -->
+    <div class="about">
+        <p>About</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed neque nec odio volutpat sagittis. Sed tincidunt nisi vel nisi consectetur, vel tristique elit hendrerit. Aliquam bibendum, felis nec mattis scelerisque, enim justo vehicula est, vel pretium felis libero at lacus.</p>
+    </div>
+</div>
+
+        
+
+</div>
 </div>
 <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
-<script>
-    // Define images for the image cycle
-    const images = ['openpas.png', 'ams.png', '15.png', 'scan77.png']; // Replace with your image paths
-
-    let currentIndex = 0;
-    const projectImage = document.getElementById('projectImage');
-
-    // Function to update the image
-    function updateImage() {
-        projectImage.src = images[currentIndex];
-    }
-
-    // Function to cycle through images
-    function cycleImages() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateImage();
-    }
-
-    // Initial call to start the cycle
-    updateImage();
-    setInterval(cycleImages, 800); // Change the interval as needed (in milliseconds)
-
-    // JavaScript to handle smooth scrolling to sections
-    function scrollToSection(sectionId) {
-        var section = document.getElementById(sectionId);
-        window.scrollTo({
-            top: section.offsetTop,
-            behavior: 'smooth'
-        });
-    }
-     // Show scroll-to-top button when scrolling down
-     window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    var scrollToTopButton = document.querySelector('.scroll-to-top');
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopButton.classList.add('show');
-    } else {
-        scrollToTopButton.classList.remove('show');
-    }
-}
-
-// Scroll to the top of the page
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
