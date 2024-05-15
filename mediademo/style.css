@@ -1,0 +1,164 @@
+
+@font-face {
+    font-family: 'xanhmono';
+    src: url('xanhmono.woff') format('woff'), url('xanhmono.woff') format('woff');
+}
+html, body {
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+.flex-container img{
+    width: 100px;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.header-container{
+    font-family: xanhmono;
+    display: flex;
+    flex-direction: row;
+   
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.flex-container {
+    display: flex;
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: xanhmono;
+
+
+}
+
+
+
+
+
+
+
+
+    .footer1{
+        color: white;
+            animation: blinker 2s linear infinite;  
+    }
+
+    .footer2{
+        color: black;
+            animation: blinker 2s linear infinite;  
+    }
+    .footer3{
+        color: white;
+            animation: blinker 2s linear infinite;  
+    }
+
+    @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+
+
+
+
+@media screen and (max-width: 767px) {
+    body{
+        background-color: rgb(255, 51, 0);
+        
+    }
+  .flex-container{
+    font-size: 4rem; 
+  }
+    .header1{
+        color: white;
+    }
+    .header2{
+        color: white;
+    }
+    .header3{
+        color: red;
+    }
+    .desktop, .tablet {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .footer1, .footer2{
+        display: none;
+    }
+    .footer3{
+        display: block
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1366px) {
+    body{
+        background-color: rgb(181, 208, 27);
+    }
+    .header1{
+        color: black;
+    }
+    .header2{
+        color: red;
+    }
+    .header3{
+        color: black;
+    }
+    .desktop, .mobile {
+        display: none;
+    }
+    .desktop, .mobile {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+    .footer1, .footer3{
+        display: none;
+    }
+    .footer2{
+        display: block
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header1{
+        color: red;
+    }
+    .header2{
+        color: white
+    }
+    .header3{
+        color: white
+    }
+    body{
+        background-color: rgb(81, 0, 255);
+    }
+    .tablet, .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+    .footer2, .footer3{
+        display: none;
+    }
+    .footer1{
+        display: block
+    }
+    .flex-container{
+        font-size: 5rem; 
+      }
+    
+}
